@@ -1,0 +1,112 @@
+---
+title: Introduction to Gobind Bakhshi
+description: Discover Gobind Bakhshi, a versatile documentation platform designed for organizing and managing project documentation efficiently.
+---
+
+## Overview
+
+Gobind Bakhshi provides a centralized space to create, organize, and collaborate on your project documentation. You can build structured docs with Markdown and MDX support, version history, and search capabilities. Teams use it to maintain living documentation that stays in sync with code repositories.
+
+## Key Benefits
+
+You gain efficiency by consolidating all project docs in one place. Individuals streamline personal knowledge bases, while teams enable seamless collaboration with role-based access and real-time edits.
+
+<Callout kind="tip">
+  Start small: Create your first doc page in under 2 minutes.
+</Callout>
+
+## Core Features
+
+<Columns cols={3}>
+  <Card title="MDX Support" icon="code" href="#mdx-support">
+    Write rich docs with components, code blocks, and interactive elements.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="#version-control">
+    Track changes with Git integration and rollback capabilities.
+  </Card>
+  <Card title="Search & Navigation" icon="search" href="#search">
+    Full-text search and sidebar navigation keep you oriented.
+  </Card>
+</Columns>
+
+## Quick Start
+
+Follow these steps to set up your first documentation space.
+
+<Steps>
+  <Step title="Create Account" icon="user-plus">
+    Visit `https://app.gobindbakhshi.com` and sign up with your email.
+  </Step>
+  <Step title="Install CLI" icon="download">
+    Use the CLI to sync local Markdown files.
+
+    <CodeGroup tabs="npm,yarn">
+      ````bash
+      npm install -g @gobind-bakhshi/cli
+      ````
+      ````bash
+      yarn global add @gobind-bakhshi/cli
+      ````
+    </CodeGroup>
+  </Step>
+  <Step title="Initialize Project" icon="folder">
+    Run the init command in your repo root.
+
+    ````bash
+    gbakhshi init
+    ````
+
+    This creates a `docs/` folder with sample MDX files.
+  </Step>
+  <Step title="Publish" icon="upload-cloud">
+    Deploy changes automatically on push.
+
+    ````bash
+    gbakhshi publish
+    ````
+  </Step>
+</Steps>
+
+## Advanced Usage Example
+
+Customize your docs with API integrations.
+
+<CodeGroup tabs="JavaScript,Python">
+  ````javascript
+  const GBakhshi = require('@gobind-bakhshi/sdk');
+
+  const client = new GBakhshi({ apiKey: 'YOUR_API_KEY' });
+  const pages = await client.docs.list({ project: 'my-project' });
+  console.log(pages);
+  ````
+  ````python
+  from gobind_bakhshi import Client
+
+  client = Client(api_key="YOUR_API_KEY")
+  pages = client.docs.list(project="my-project")
+  print(pages)
+  ````
+</CodeGroup>
+
+## Next Steps
+
+Explore more with these guides:
+
+<Columns cols={2}>
+  <Card title="Quickstart" icon="rocket" href="/quickstart">
+    Dive into full setup and first project.
+  </Card>
+  <Card title="Authentication" icon="key" href="/authentication">
+    Secure your docs with API keys and OAuth.
+  </Card>
+  <Card title="Customization" icon="settings" href="/configuration">
+    Tailor themes and layouts.
+  </Card>
+  <Card title="Changelog" icon="git-commit" href="/changelog">
+    Stay updated with latest releases.
+  </Card>
+</Columns>
+
+<Callout kind="info">
+  Need help? Check the [search bar](https://docs.gobindbakhshi.com/search) or contact support at support@gobindbakhshi.com.
+</Callout>

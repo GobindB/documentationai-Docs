@@ -1,0 +1,143 @@
+---
+title: Changelog
+description: Track the latest updates, new features, and improvements in Gobind Bakhshi to stay informed about platform enhancements.
+---
+
+## Recent Updates
+
+Gobind Bakhshi evolves quickly to help you manage your project documentation effectively. Review the latest releases below to see what's new. Each version includes detailed changelogs with features, improvements, and fixes.
+
+<Callout kind="info">
+  Subscribe to our RSS feed or follow us on GitHub to get notifications for new releases.
+</Callout>
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added support for custom brand colors in documentation themes
+- Introduced real-time collaboration editing for shared docs
+- New `<Video>` component for embedding tutorials directly
+
+## Improvements
+
+- Enhanced search with fuzzy matching for better results
+- Faster page rendering by optimizing MDX parsing
+
+## Bug Fixes
+
+- Fixed parsing errors with nested code blocks
+- Resolved issues with special character escaping in prose
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Integrated Mermaid diagrams as native code blocks
+- Added `<ParamField>` and `<ResponseField>` for API docs
+
+## Bug Fixes
+
+- Corrected JSX attribute quoting in all components
+- Fixed heading hierarchy enforcement (no more H1 in body)
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["feature", "breaking"]}>
+
+## New Features
+
+- Core MDX documentation engine with 15+ components
+- YAML frontmatter validation for all pages
+- Built-in icon library with Lucide integration
+
+## Breaking Changes
+
+- Removed legacy `<Mermaid>` component; use code blocks only
+
+</Update>
+
+## Upgrading to the Latest Version
+
+Follow these steps to upgrade your Gobind Bakhshi instance and apply the new features.
+
+<Steps>
+  <Step title="Backup Your Docs" icon="database">
+
+    Create a full backup of your documentation repository.
+
+````bash
+git clone your-repo.git backup-docs
+tar -czf docs-backup-$(date +%Y%m%d).tar.gz docs/
+````
+
+  </Step>
+  <Step title="Update Package" icon="package">
+
+    Install the latest version using your preferred package manager.
+
+    <CodeGroup tabs="npm,yarn">
+````bash
+npm install gobind-bakhshi@latest
+````
+````bash
+yarn add gobind-bakhshi@latest
+````
+    </CodeGroup>
+
+  </Step>
+  <Step title="Run Migrations" icon="settings">
+
+    Execute the migration script to update your config.
+
+````bash
+npx gobind-bakhshi migrate
+````
+
+  </Step>
+  <Step title="Verify Changes" icon="check-circle">
+
+    Test your pages for parsing errors and new features.
+
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  After upgrading, review the `<Update>` components above for migration notes on breaking changes.
+</Callout>
+
+## Upcoming Changes
+
+Stay ahead with previews of what's coming next.
+
+<ExpandableGroup>
+  <Expandable title="v1.3.0 Preview (ETA: November 2024)" default-open="true">
+
+    - AI-powered content suggestions
+    - Multi-language documentation support
+    - Advanced analytics dashboard
+
+  </Expandable>
+  <Expandable title="v1.4.0 Roadmap">
+
+    - Full GitHub integration for PR previews
+    - Custom domain support for hosted docs
+
+  </Expandable>
+</ExpandableGroup>
+
+## Resources
+
+<Columns cols={3}>
+  <Card title="GitHub Repo" icon="github" href="https://github.com/gobind-bakhshi/docs" target="_blank">
+    View source code and contribute.
+  </Card>
+  <Card title="API Reference" icon="code" href="/authentication">
+    Explore API endpoints and auth.
+  </Card>
+  <Card title="Community Forum" icon="users" href="https://forum.example.com" target="_blank">
+    Discuss features and get support.
+  </Card>
+</Columns>
